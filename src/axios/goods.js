@@ -1,11 +1,11 @@
 import axios from 'axios';
 import router from '../router/index';
 
-const requestAxios = axios.create({
-  baseURL: process.env.VUE_APP_FB_URL,
+const productAxios = axios.create({
+  baseURL: process.env.VUE_APP_JSON_SERVER + '/products',
 });
 
-requestAxios.interceptors.response.use(null, error => {
+productAxios.interceptors.response.use(null, (error) => {
   if (error.response.status === 401) {
     router.push('/auth?message=notauth');
   }
@@ -13,4 +13,4 @@ requestAxios.interceptors.response.use(null, error => {
   return Promise.reject(error);
 });
 
-export default requestAxios;
+export default productAxios;

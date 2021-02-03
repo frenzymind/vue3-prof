@@ -5,7 +5,16 @@
 </template>
 
 <script>
-export default {};
+import { onMounted } from "vue";
+export default {
+  setup() {
+    console.log("SHOP CREATED");
+
+    onMounted(() => {
+      console.log("SHOP MOUNTED");
+    });
+  },
+};
 </script>
 
 <style>

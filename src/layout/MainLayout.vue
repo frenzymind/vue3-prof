@@ -6,6 +6,7 @@
     <router-view></router-view>
   </div>
 </template>
+
 <script>
 import TheNavBar from "../components/TheNavbar.vue";
 import TheSideBar from "../components/TheSideBar.vue";
@@ -13,7 +14,9 @@ import AppMessage from "../components/UI/AppMessage.vue";
 
 export default {
   components: { TheNavBar, AppMessage, TheSideBar },
+  setup() {},
 };
 </script>
+
 <style>
 </style>
